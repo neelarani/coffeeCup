@@ -13,14 +13,10 @@ const Login = () => {
     console.log(email, password);
     event.target.reset();
 
-    userLogin(email, password)
-      .then(result => {
-        setUser(result.user);
-        alert('login success');
-      })
-      .catch(error => {
-        alert('Failed Login');
-      });
+    userLogin(email, password).then(result => {
+      setUser(result.user);
+      alert('login success');
+    });
   };
 
   return (
